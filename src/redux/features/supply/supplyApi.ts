@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { baseApi } from "../../api/baseApi";
 
 const supplyApi = baseApi.injectEndpoints({
@@ -7,6 +8,9 @@ const supplyApi = baseApi.injectEndpoints({
         url: "/supplies",
         method: "GET",
       }),
+      transformResponse: (response: any) => {
+        return response.data;
+      },
     }),
 
     postSingleSupply: builder.mutation({
