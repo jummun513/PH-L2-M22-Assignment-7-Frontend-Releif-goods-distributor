@@ -1,7 +1,7 @@
 import bannerImg from "../../../../assets/images/banner.jpg";
 const HeroSection = () => {
   return (
-    <div className="relative h-[50vh] md:h-full">
+    <div className="container mx-auto relative h-[50vh] md:h-full">
       <div className="h-full">
         <img
           className="h-full object-cover"

@@ -21,7 +21,7 @@ const ReliefGoodsSection = () => {
   }
 
   return (
-    <div className="my-20 md:my-28">
+    <div className="container mx-auto my-20 md:my-28">
       <Typography variant="h2" className="text-center">
         Most Needed Relief Goods
       </Typography>

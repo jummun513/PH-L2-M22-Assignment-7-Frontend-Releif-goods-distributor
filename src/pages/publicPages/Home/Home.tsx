@@ -1,11 +1,15 @@
+import GallerySecion from "./GallerySection/GallerySecion.js";
 import HeroSection from "./HeroSection/HeroSection.js";
 import ReliefGoodsSection from "./ReliefGoodsSection/ReliefGoodsSection.js";
+import TestimonialSection from "./TestimonialSection/TestimonialSection.js";
 const Home = () => {
   return (
-    <div className="container mx-auto">
+    <>
       <HeroSection />
       <ReliefGoodsSection />
-    </div>
+      <TestimonialSection />
+      <GallerySecion />
+    </>
   );
 };
 
