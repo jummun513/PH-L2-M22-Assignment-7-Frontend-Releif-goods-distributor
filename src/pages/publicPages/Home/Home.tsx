@@ -1,3 +1,4 @@
+import AboutUsSection from "./AboutUsSection/AboutUsSection.js";
 import GallerySecion from "./GallerySection/GallerySecion.js";
 import HeroSection from "./HeroSection/HeroSection.js";
 import ReliefGoodsSection from "./ReliefGoodsSection/ReliefGoodsSection.js";
@@ -9,6 +10,7 @@ const Home = () => {
       <ReliefGoodsSection />
       <TestimonialSection />
       <GallerySecion />
+      <AboutUsSection />
     </>
   );
 };
