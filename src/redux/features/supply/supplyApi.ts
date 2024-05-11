@@ -20,8 +20,21 @@ const supplyApi = baseApi.injectEndpoints({
         body: data,
       }),
     }),
+
+    getSingleSupply: builder.query({
+      query: (id) => ({
+        url: `/supply/${id}`,
+        method: "GET",
+      }),
+      transformResponse: (response: any) => {
+        return response.data;
+      },
+    }),
   }),
 });
 
-export const { useGetAllSuppliesQuery, usePostSingleSupplyMutation } =
-  supplyApi;
+export const {
+  useGetAllSuppliesQuery,
+  usePostSingleSupplyMutation,
+  useGetSingleSupplyQuery,
+} = supplyApi;

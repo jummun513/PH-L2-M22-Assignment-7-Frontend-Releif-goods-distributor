@@ -3,11 +3,12 @@ import App from "../App";
 import AdminLayout from "../components/layout/AdminLayout/AdminLayout";
 import AdminDashboard from "../components/layout/AdminLayout/AdminDashboard/AdminDashboard";
 import Home from "../pages/publicPages/Home/Home";
-import ReliefGoods from "../pages/publicPages/ReliefGoods/ReliefGoods";
 import Login from "../pages/publicPages/Login/Login";
 import Register from "../pages/publicPages/Register/Register";
 import CreateSupply from "../pages/privatePages/supplyMaintenance/CreateSupply/CreateSupply";
 import GetSupplies from "../pages/privatePages/supplyMaintenance/GetSupplies/GetSupplies";
+import AllReliefGoods from "../pages/publicPages/AllReliefGoods/AllReliefGoods";
+import ReliefGoodsDetail from "../pages/publicPages/ReliefGoodsDetail/ReliefGoodsDetail";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,11 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home></Home> },
       { path: "home", element: <Home></Home> },
-      { path: "relief-goods", element: <ReliefGoods></ReliefGoods> },
+      { path: "relief-goods", element: <AllReliefGoods></AllReliefGoods> },
+      {
+        path: "relief-goods/:id",
+        element: <ReliefGoodsDetail></ReliefGoodsDetail>,
+      },
     ],
   },
   {
