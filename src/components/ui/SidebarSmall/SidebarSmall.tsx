@@ -31,7 +31,7 @@ const SidebarSmall = () => {
   return (
     <div>
       <Button
-        className="rounded-none h-screen w-full flex items-start"
+        className="rounded-none min-h-screen h-full w-full flex items-start"
         size="sm"
         onClick={openDrawer}
       >
