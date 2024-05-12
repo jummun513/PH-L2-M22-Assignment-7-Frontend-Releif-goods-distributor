@@ -11,6 +11,7 @@ const supplyApi = baseApi.injectEndpoints({
       transformResponse: (response: any) => {
         return response.data;
       },
+      providesTags: ["supplies"],
     }),
 
     postSingleSupply: builder.mutation({
@@ -19,6 +20,7 @@ const supplyApi = baseApi.injectEndpoints({
         method: "POST",
         body: data,
       }),
+      invalidatesTags: ["supplies"],
     }),
 
     getSingleSupply: builder.query({
@@ -26,6 +28,7 @@ const supplyApi = baseApi.injectEndpoints({
         url: `/supply/${id}`,
         method: "GET",
       }),
+      providesTags: ["singleSupply"],
       transformResponse: (response: any) => {
         return response.data;
       },

@@ -47,7 +47,7 @@ const GetSupplies = () => {
         </Button>
       </div>
 
-      {data.length === 0 ? (
+      {data?.length === 0 ? (
         <NoDataFound></NoDataFound>
       ) : (
         <Card className="h-full w-full overflow-scroll">
@@ -73,7 +73,7 @@ const GetSupplies = () => {
               </tr>
             </thead>
             <tbody>
-              {data.map((d: any, index: number) => (
+              {data?.map((d: any, index: number) => (
                 <tr key={index} className="even:bg-blue-gray-50/50">
                   <td className="p-4">
                     <img

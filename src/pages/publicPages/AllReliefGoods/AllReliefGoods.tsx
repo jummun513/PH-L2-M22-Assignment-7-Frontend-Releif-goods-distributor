@@ -24,11 +24,11 @@ const AllReliefGoods = () => {
       <Typography variant="h1" className="text-center">
         Most Needed Relief Goods
       </Typography>
-      {data.length === 0 ? (
+      {data?.length === 0 ? (
         <NoDataFound></NoDataFound>
       ) : (
         <div className="grid lg:grid-cols-2 2xl:grid-cols-3 place-items-center gap-8 md:gap-10 mt-10 md:mt-14">
-          {data.map((item: any, index: number) => (
+          {data?.map((item: any, index: number) => (
             <Card key={index} className="mt-6 w-96">
               <CardHeader color="blue-gray" className="relative h-56">
                 <img src={item.image?.url} alt={item.title} />
